@@ -1,0 +1,169 @@
+/*  1- Commom styles
+    2- General css styles
+    3- Sections style
+        3.0 Header
+        3.1 Home section
+        3.2 About section
+        3.2 Portfolio section
+        3.3 Services section
+        3.4 Prices section
+        3.5 Team section
+        3.6 Bolg section
+        3.7 Contact section
+        3.8 Footer
+*/
+/* Common Style*/
+/* 
+1-Section header
+
+2- Opavity hover
+3- hover down
+4- hover right
+*/
+
+/* 1. Common styles*/
+h2{
+    color: black;
+    text-transform: capitalize;
+    text-align: center;
+    padding-top: 24px;
+    font-weight: bold;
+}
+.line-header{
+    height: 4px;
+    width: 5%;
+    margin: auto;
+    background-color: #0d6efd;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.hover-lr{
+   position: relative;
+}
+.hover-lr::after{
+    position: absolute;
+    content: "";
+    width: 0;
+    background-color: rgba(0, 0, 0, 0.801);
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    z-index: -1;
+}
+.hover-lr:hover:after{
+    width: 100%;
+}
+.hover-lr:hover.about-item h4,
+.hover-lr:hover.about-item p,
+.hover-lr:hover.service-item div p,
+.hover-lr:hover.service-item div h5{
+    color: white;
+}
+
+/* General styles */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/* Home Section */
+header{
+    z-index: 99;
+}
+.line-under:after{
+   content: "";
+   display: block;
+   height: 2px;
+   background-color:#0d6efd;
+   width: 0;
+   transition: all .5s;
+   -webkit-transition: all .5s;
+   -moz-transition: all .5s;
+   -ms-transition: all .5s;
+   -o-transition: all .3s;
+}
+.line-under:hover:after{
+    width: 100%;
+ }
+.nav-link{
+    color: white !important;
+}
+/* Home section  */
+#home-section{
+    height: 100vh;
+    background-image: linear-gradient(0deg,#000b,#000b),url(../images/background/background1.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position:center;
+    position: relative;
+}
+#home-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+}
+/* ------------------------------- */
+/* About Section */
+.about-item,.service-item{
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.397);
+}
+.about-item a{
+    text-decoration: none;
+}
+
+/* Features-section */
+.works-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.712);
+    opacity: 0;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+.features-item:hover .works-overlay{
+    opacity: 1;
+}
+
+/* service section */
+
+.service-list li::before{
+    content: "\f058";
+    font-family: "Font Awesome 5 Free";
+    color: #0d6efd;
+    -webkit-margin-end: 10px;
+}
+
+.service-numbers{
+    min-height: 200px;
+    background-image: linear-gradient(0deg,#000b,#000b),url(../images/background/background2.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position:center;
+    position: relative;
+}
